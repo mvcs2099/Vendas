@@ -7,6 +7,7 @@ package negocio;
 
 import dados.IRepositorioFuncionario;
 import dados.RepositorioFuncionarioDB;
+import java.util.ArrayList;
 
 /**
  *
@@ -17,4 +18,20 @@ public class CadastroFuncionario {
     public CadastroFuncionario(){
         this.repositorioFuncionario = new RepositorioFuncionarioDB();
     }
+    public void cadastrarFuncionario(Funcionario func){
+        repositorioFuncionario.cadastrar(func);
+    }
+    public void removerFuncionario(String id){
+        repositorioFuncionario.remover(id);
+    }
+    public void alterarFuncionario(Funcionario funcionario){
+        repositorioFuncionario.alterar(funcionario);
+    }
+    public ArrayList<Funcionario> listarTodos(){
+        return repositorioFuncionario.listarTodos();
+    }
+    public Funcionario buscarFuncionario(String id){
+        return repositorioFuncionario.buscar(id);
+    }
+    
 }
