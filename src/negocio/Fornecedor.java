@@ -9,11 +9,17 @@ package negocio;
  *
  * @author mvcs2
  */
-public class Fornecedor extends PessoaJuridica{
-    
-    public Fornecedor(String nomeFantasia, String cnpj, String telefone, Endereco endereco) {
-        super(nomeFantasia, cnpj, telefone, endereco);
+public class Fornecedor{
+    private String nomeFantasia;
+    private String cnpj;
+    private String telefone;
+
+    public Fornecedor(String nomeFantasia, String cnpj, String telefone) {
+        this.nomeFantasia = nomeFantasia;
+        this.cnpj = cnpj;
+        this.telefone = telefone;
     }
+     
     
     
 }
