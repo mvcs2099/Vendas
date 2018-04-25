@@ -5,6 +5,7 @@
  */
 package negocio;
 
+import java.util.Calendar;
 import javax.persistence.*;
 
 /**
@@ -21,16 +22,19 @@ public class Funcionario{
     private String cpf;
     @Column(name = "tel_funcionario")
     private String telefone;
-   
+    private String email;
     private Endereco endereco;
-    
-    public Funcionario(String nome, String cpf, String telefone, Endereco endereco) {
+    private Calendar dataNasc;
+
+    public Funcionario(String nome, String cpf, String telefone, String email, Endereco endereco, Calendar dataNasc) {
         this.nome = nome;
         this.cpf = cpf;
-        this.endereco = endereco;
         this.telefone = telefone;
+        this.email = email;
+        this.endereco = endereco;
+        this.dataNasc = dataNasc;
     }
-
+    
     public String getNome() {
         return nome;
     }
